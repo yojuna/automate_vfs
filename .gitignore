@@ -1,0 +1,6 @@
+envs
+__pycache__
+config.py
+debug_log.log
+geckodriver.log
+
