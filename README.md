@@ -38,6 +38,8 @@ Workflow:
 
 ## Usage Notes
 
+Entry point is `src/app.py`
+
 ### Basic Setup 
 
 create conda env using local directory (conda create --prefix ./envs)
@@ -46,9 +48,7 @@ use the requirements files (either requirements.yml or requirements.txt) to crea
 
 or finwhatever floats your boat, you know the drill
 
-*NOTE:*
-
-Could not resolve to a good clean solution/command for creating new conda env using the requirements files;
+NOTE: Could not resolve to a good clean solution/command for creating new conda env using the requirements files;
 
 tread with caution; hacky solution will work;
 - update README if solution is found
@@ -60,18 +60,17 @@ issue: twilio and a few other dependencies are not available on conda channels; 
 
 https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
 
-install the web driver you need
+Install the web driver you need and move it to the envs directory
 
-and move it to the envs directory
+Quick reference from the selenium doc above
 
-quick reference from the selenium doc above
+- Chrome/Chromium -> https://chromedriver.storage.googleapis.com/index.html
 
-Chrome/Chromium -> https://chromedriver.storage.googleapis.com/index.html
-Firefox	        -> https://github.com/mozilla/geckodriver/releases
+- Firefox	        -> https://github.com/mozilla/geckodriver/releases
 
-and others are available in the documentation above
+... and others are available in the documentation above
 
-NOTE: Change the line in src/checker.py accordingly.
+NOTE: Change the below line in `src/checker.py` accordingly.
 
 > self.driver = webdriver.Firefox()
 
