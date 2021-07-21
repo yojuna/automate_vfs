@@ -104,7 +104,8 @@ config_dict = {
 	'twiml_url': 'https://handler.twilio.com/twiml/EHxxxxa34wfds',
 	'visa_application_center': "'Germany Visa Application Centre-Mumbai'",
 	'appointment_category': "'Master student'",
-	'login_url': "https://visa.vfsglobal.com/ind/en/deu/login"
+	'login_url': "https://visa.vfsglobal.com/ind/en/deu/login",
+	'retry_attempts': 3
 }
 ```
 
