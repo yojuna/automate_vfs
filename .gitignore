@@ -3,4 +3,5 @@ __pycache__
 config.py
 debug_log.log
 geckodriver.log
+run.sh
 

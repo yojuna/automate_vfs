@@ -4,7 +4,7 @@
 
 from twilio.rest import Client
 
-from config import config
+from src.config import config
 import logging
 
 client = Client()

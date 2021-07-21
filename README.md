@@ -38,15 +38,22 @@ Workflow:
 
 ## Usage Notes
 
-Entry point is `src/app.py`
+Entry point is `app.py`
 
+Run `python app.py`
+
+Packaged with conda initialization and Twilio credentials in `run_example.sh` for convenience.
+
+- NOTE: i.e. after updating with twilio credentials (see below in Config)
+
+ 
 ### Basic Setup 
 
 create conda env using local directory (conda create --prefix ./envs)
 
 use the requirements files (either requirements.yml or requirements.txt) to create your environment
 
-or finwhatever floats your boat, you know the drill
+or find whatever that floats your boat, you know the drill
 
 NOTE: Could not resolve to a good clean solution/command for creating new conda env using the requirements files;
 
@@ -81,9 +88,9 @@ https://www.twilio.com/blog/make-phone-call-python-twilio-programmable-voice
 
 ### Config
 
-The config that is imported in `checker.py` is added to .gitignore for security reasons.
+The config that is imported in `src/checker.py` is added to .gitignore for security reasons.
 
-`config.py` contains a config dict which is imported.
+`src/config.py` contains a config dict which is imported.
 
 Add the following dictionary to your config.py and update the values.
 
