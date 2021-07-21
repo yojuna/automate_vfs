@@ -13,15 +13,15 @@ If not, will keep trying at regular intervals.
 Browser automation using Selenium.
 
 Very narrow scope in this first prototype version.
-	- No incentive to generalize.
-	- If the project gains traction, then may start generalising few aspects for broader use cases.
+- No incentive to generalize.
+- If the project gains traction, then may start generalising few aspects for broader use cases.
 
 Right now only works with Firefox;
-	- For Chrome, add the Chrome Driver to the path and update the initial driver instantion to webdriver.Chrome() from webdriver.Firefox().
-		- Or something like that, verify the syntax yourself
+- For Chrome, add the Chrome Driver to the path and update the initial driver instantion to webdriver.Chrome() from webdriver.Firefox().
+	- Or something like that, verify the syntax yourself
 
 Project requirement:
-	Send alert if slot is available.
+- Send alert if slot is available.
 
 ---
 
@@ -38,18 +38,22 @@ Workflow:
 
 ## Usage Notes
 
+### Basic Setup 
+
 create conda env using local directory (conda create --prefix ./envs)
 
 use the requirements files (either requirements.yml or requirements.txt) to create your environment
 
-or whatever floats your boat, you know the drill
+or finwhatever floats your boat, you know the drill
 
-NOTE: 
+*NOTE:*
+
 Could not resolve to a good clean solution/command for creating new conda env using the requirements files;
-tread with caution; hacky solution will work;
-	- update README if solution is found
-issue: twilio and a few other dependencies are not available on conda channels; need to install them with pip
 
+tread with caution; hacky solution will work;
+- update README if solution is found
+
+issue: twilio and a few other dependencies are not available on conda channels; need to install them with pip
 
 
 ### Selenium Setup 
@@ -78,9 +82,13 @@ https://www.twilio.com/blog/make-phone-call-python-twilio-programmable-voice
 
 ### Config
 
-config.py contains a config dict (config.py added to .gitignore for security reasons)
+The config that is imported in `checker.py` is added to .gitignore for security reasons.
 
-- Example Structure: 
+`config.py` contains a config dict which is imported.
+
+Add the following dictionary to your config.py and update the values.
+
+
 ```
 config_dict = {
 	'username': 'email_id@email.com',
@@ -107,7 +115,7 @@ export TWILIO_AUTH_TOKEN=7b6fbxxxxxxx2b
 ### Crontab Setup
 
 #### Steps
-using https://crontab.guru/
+using https://crontab.guru/ for the crontab formula
 
 working solution for conda env
 https://stackoverflow.com/a/60977676/11750716
@@ -142,6 +150,9 @@ BASH_ENV=~/.bashrc_conda
 Useful links/reference used during development:
 
 https://www.twilio.com/blog/make-phone-call-python-twilio-programmable-voice
+
 https://towardsdatascience.com/how-to-schedule-python-scripts-with-cron-the-only-guide-youll-ever-need-deea2df63b4e
-	https://unix.stackexchange.com/questions/454957/cron-job-to-run-under-conda-virtual-environment
+	
+- https://unix.stackexchange.com/questions/454957/cron-job-to-run-under-conda-virtual-environment
+
 https://docs.python.org/3/howto/logging.html
