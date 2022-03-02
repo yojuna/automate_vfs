@@ -4,7 +4,7 @@ Automated appointment slot checking on the VFS Portal
 
 If slots are available, will send an alert via phone call.
 
-If not, will keep trying at regular intervals.
+If not, we will keep trying at regular intervals.
 
 ---
 
